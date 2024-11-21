@@ -1,0 +1,36 @@
+<app-menu></app-menu>
+<div class="container">
+    <form  class="form" #form="ngForm" (ngSubmit)="putProducto(product)" >
+        <h2 class="form-title">Modificar Usuario</h2>
+        <div class="form-grid">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="codigo">Codigo:</label>
+                    <input type="number" id="codigo" [(ngModel)]="product.codigo" name="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" [(ngModel)]="product.descripcion" name="descripcion" required>
+                </div>
+                <div class="precio">
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" [(ngModel)]="product.precio" name="precio" required>
+                </div>
+            </div>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="stock">Stock:</label>
+                    <input type="number" id="stock"  [(ngModel)]="product.stock"  name="stock" required>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-volver" routerLink="/"><i class="fa fa-arrow-circle-left"
+                aria-hidden="true"></i>Volver</button>
+        <button type="submit" class="btn btn-registrar" (click)="putProducto(product)">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            Modificar
+
+        </button>
+    </form>
+</div>

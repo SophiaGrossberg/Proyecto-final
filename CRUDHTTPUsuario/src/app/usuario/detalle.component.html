@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div>
+
+    <div class="container" *ngIf="product">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Datos Product</h2>
+            </div>
+            <div class="card-body">
+                <ul class="card-list">
+                    <li class="list-group-item">Codigo: {{product.codigo}}</li>
+                    <li class="list-group-item">Nombre: {{product.nombre}}</li>
+                    <li class="list-group-item">Descripción: {{product.descripcion}}</li>
+                    <li class="list-group-item">Precio: {{product.precio}}</li>
+                    <li class="list-group-item">Stock: {{product.stock}}</li>
+              
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary w-100" routerLink="/">Volver</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
