@@ -44,7 +44,7 @@ export class ModificarComponent implements OnInit {
       data=>{
         console.log('Exitoso')
         this.product=data;
-        this.toastr.success('Registro modificado correctamente');
+        this.router.navigate(['']);
       }
       
     )

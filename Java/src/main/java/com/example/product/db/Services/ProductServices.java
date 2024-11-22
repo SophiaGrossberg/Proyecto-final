@@ -46,6 +46,7 @@ public class ProductServices {
 	
 	public product update(int codigo, ProductDto dto) throws ResourceNotFoundException {
 		
+		
 		product products = productRepository.findById(codigo)
 				.orElseThrow(()-> new ResourceNotFoundException(""));
 		
